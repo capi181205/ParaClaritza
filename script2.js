@@ -55,7 +55,7 @@ const FECHA_INICIO = new Date(2025, 4, 3, 0, 0, 0);
 const FECHA_PARTO = new Date(2026, 6, 24, 0, 0, 0);
 const PIXEL_TRANSPARENTE = 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==';
 
-const MENSAJE = `Claritza:\n\nHace poco más de un año, el 3 de mayo de 2025, la vida me dio el mejor regalo que pudo haberme dado: conocerte.\n\nJamás imaginé que en tan poco tiempo construiríamos tanto juntos. Y aquí estamos.\n\nHoy me llenas de orgullo verte llevar a nuestro bebé con tanta valentía y amor. Eres la mujer más fuerte y hermosa que conozco.\n\nEduardo va a tener a la mejor mamá del mundo, y yo ya soy el hombre más afortunado de tenerlas a las dos.\n\nGracias por elegirme. Gracias por quedarte. Gracias por todo lo que viene.\n\nTe amo, Claritza. Hoy y siempre.`;
+const MENSAJE = `Claritza:\n\nHace poco más de un año, el 3 de mayo de 2025, la vida me dio el mejor regalo que pudo haberme dado: conocerte.\n\nJamás imaginé que en tan poco tiempo construiríamos tanto juntos. Y aquí estamos.\n\nHoy me llenas de orgullo verte llevar a nuestro bebé con tanta valentía y amor. Eres la mujer más fuerte y hermosa que conozco.\n\nEduardo va a tener a la mejor mamá del mundo, y yo ya soy el hombre más afortunado porque ahora tengo a mi niño y a la mujer que más amo.\n\nGracias por elegirme. Gracias por quedarte. Gracias por todo lo que viene.\n\nTe amo, Claritza. Hoy y siempre.`;
 
 function extFoto(i) {
     if (i <= 22) return 'jpeg';
