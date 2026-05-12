@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Para Claritza 💕</title>
+    <link rel="stylesheet" href="style2.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,700;1,300;1,400&family=Josefin+Sans:wght@200;300;400;600&family=Dancing+Script:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="preloader" id="preloader">
+        <div class="preloader-glow"></div>
+        <div class="loader-heart">❤️</div>
+        <div class="loader-text">
+            <span>Preparando tu regalo</span>
+            <strong id="loader-percent">0%</strong>
+        </div>
+        <div class="loader-bar"><div class="loader-fill" id="loader-fill"></div></div>
+    </div>
+
+    <div class="cursor-heart" id="cursor">💕</div>
+    <div class="particles" id="particles"></div>
+    <div class="confetti-container" id="confetti-container"></div>
+
+    <nav class="nav-dots" id="nav-dots" aria-label="Secciones">
+        <button class="nav-dot active" data-seccion="0" data-label="Inicio" title="Inicio"></button>
+        <button class="nav-dot" data-seccion="1" data-label="La Broma" title="La Broma"></button>
+        <button class="nav-dot" data-seccion="2" data-label="Fotos" title="Fotos"></button>
+        <button class="nav-dot" data-seccion="3" data-label="Bebé" title="Bebé"></button>
+        <button class="nav-dot" data-seccion="4" data-label="Carta" title="Carta"></button>
+        <button class="nav-dot" data-seccion="5" data-label="Cuenta Regresiva" title="Cuenta Regresiva"></button>
+        <button class="nav-dot" data-seccion="6" data-label="El Nombre" title="El Nombre"></button>
+        <button class="nav-dot" data-seccion="7" data-label="Celebración" title="Celebración"></button>
+        <button class="nav-dot" data-seccion="8" data-label="Final" title="Final"></button>
+        <span class="nav-label" id="nav-label">Inicio</span>
+    </nav>
+
+    <button class="nav-arrow nav-arrow-up" id="nav-up" aria-label="Anterior">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+    <button class="nav-arrow nav-arrow-down" id="nav-down" aria-label="Siguiente">
+        <i class="fas fa-chevron-down"></i>
+    </button>
+
+    <audio id="audioBano" src="bano.mp3" preload="auto"></audio>
+    <audio id="audioJuanes" src="juanes.mp3" preload="auto"></audio>
+
+    <section class="seccion" id="s0">
+        <div class="s0-bg"></div>
+        <div class="s0-content">
+            <p class="eyebrow">✦ un regalo especial ✦</p>
+            <button class="corazon-latiendo" id="corazon-secreto" aria-label="Corazón secreto">❤️</button>
+            <h1 class="s0-titulo">Para ti,<br><em>Claritza</em></h1>
+            <p class="s0-sub">hecho con todo el amor del mundo</p>
+            <p class="s0-counter" id="contador-amor">Calculando nuestros días juntos...</p>
+            <div class="secret-note oculto" id="secret-note">
+                Mi amor: hasta lo escondido en esta página tiene tu nombre.
+            </div>
+            <button class="btn-principal" id="btn-s0">
+                <i class="fas fa-gift"></i>
+                <span>Abrir regalo</span>
+            </button>
+        </div>
+    </section>
+
+    <section class="seccion" id="s1">
+        <div class="s1-bg"></div>
+        <div class="s1-content">
+            <p class="eyebrow">🎵 el baño — enrique iglesias ft. bad bunny</p>
+            <p class="broma-label" id="broma-label">La primera vez que te vi...</p>
+
+            <div class="foto-broma-wrap">
+                <div class="foto-broma-marco">
+                    <img src="foto1.jpeg" alt="Nosotros" class="foto-broma" id="foto-broma">
+                </div>
+                <div class="reaccion" id="reaccion">😍</div>
+            </div>
+
+            <div class="glass-player">
+                <div class="gp-tiempo" id="audio-tiempo">0:09</div>
+                <div class="gp-barra-wrap" id="barra-bano-wrap">
+                    <div class="gp-barra-bg"></div>
+                    <div class="gp-barra-fill" id="barra-bano-fill"></div>
+                    <div class="gp-barra-thumb" id="barra-bano-thumb"></div>
+                </div>
+                <div class="gp-tiempo" id="audio-duracion">--:--</div>
+                <button class="gp-btn" id="audio-playpause" aria-label="Pausar o reproducir">
+                    <i class="fas fa-pause"></i>
+                </button>
+            </div>
+
+            <p class="broma-hint" id="broma-hint">🎵 escuchando...</p>
+        </div>
+    </section>
+
+    <section class="seccion" id="s2">
+        <div class="s2-bg"></div>
+        <div class="slide-blur-bg" id="slide-blur-bg"></div>
+
+        <div class="slideshow-wrap">
+            <div class="slide-header">
+                <p class="eyebrow" style="color:rgba(255,255,255,0.4)">nuestra historia en fotos</p>
+                <div class="slide-counter-top" id="slide-counter">1 / 43</div>
+            </div>
+
+            <div class="slideshow-row">
+                <button class="slide-btn" id="btn-prev" aria-label="Foto anterior"><i class="fas fa-chevron-left"></i></button>
+                <div class="slides-track" id="slides-track"></div>
+                <button class="slide-btn" id="btn-next" aria-label="Foto siguiente"><i class="fas fa-chevron-right"></i></button>
+            </div>
+
+            <div class="slide-progress-wrap">
+                <div class="slide-progress-bar" id="slide-progress-bar"></div>
+            </div>
+        </div>
+
+        <div class="glass-player-bottom" id="player-juanes">
+            <img src="portada2.jpg" class="player-cover" alt="Portada">
+            <div class="player-info">
+                <div class="player-title">A Dios le Pido</div>
+                <div class="player-artist">Juanes</div>
+            </div>
+            <button class="gp-btn" id="btnJuanes" aria-label="Pausar o reproducir Juanes"><i class="fas fa-pause"></i></button>
+            <div class="player-seek" id="player-progress-wrap">
+                <div class="player-seek-fill" id="barraJuanes"></div>
+            </div>
+        </div>
+
+        <button class="btn-continuar" id="btn-s2">Ver mensaje del bebé 👶</button>
+    </section>
+
+    <section class="seccion" id="s3">
+        <div class="s3-bg"></div>
+        <div class="bebe-emojis-fondo" id="bebe-emojis-fondo"></div>
+
+        <div class="bebe-content">
+            <div class="bebe-icono-grande">👶</div>
+            <p class="eyebrow" style="color:var(--azul-bebe)">viene en camino</p>
+            <h2 class="bebe-titulo">¡Es un niño!</h2>
+            <div class="bebe-nombre-grande">Eduardo</div>
+            <div class="bebe-apellidos">Rosales Laurencio</div>
+
+            <div class="bebe-glass-card">
+                <p class="bebe-frase">"Esperamos con ansias al <strong>gordo</strong>,<br>a nuestro bebé hermoso"</p>
+                <p class="bebe-apodo">🥊 Capi Jr. 🥊</p>
+                <p class="bebe-fecha-nac">Fecha estimada: <strong>24 de julio de 2026</strong></p>
+            </div>
+
+            <div class="bebe-emojis-row">
+                <span>👶</span><span>💙</span><span>🍼</span>
+                <span>👣</span><span>🧸</span><span>⚽</span>
+                <span>🥊</span><span>🌟</span><span>💪</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="seccion seccion-scroll" id="s4">
+        <div class="carta-scroll-progress" id="carta-scroll-progress"></div>
+        <div class="s4-bg"></div>
+        <div class="carta-exterior">
+            <div class="carta-sello">💌</div>
+            <div class="carta-glass">
+                <div class="carta-deco-top">✦ &nbsp; con todo mi corazón &nbsp; ✦</div>
+                <p id="maquina"></p>
+                <div class="carta-firma">— Tu amor, siempre 🌹</div>
+            </div>
+            <div class="carta-actions">
+                <button class="carta-nav-btn" id="btn-s4-prev" aria-label="Pantalla anterior">
+                    <i class="fas fa-chevron-up"></i>
+                </button>
+                <button class="btn-continuar oculto" id="btn-s4">
+                    <span>Cuenta regresiva</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <section class="seccion" id="s5">
+        <div class="s5-bg"></div>
+        <div class="cuenta-content">
+            <p class="eyebrow" style="color:var(--azul-bebe)">✦ cuenta regresiva ✦</p>
+            <h2 class="cuenta-titulo">Nuestro bebé llega en...</h2>
+
+            <div class="cuenta-bloques">
+                <div class="bloque-glass">
+                    <span id="cnt-dias">--</span>
+                    <label>días</label>
+                </div>
+                <div class="bloque-glass">
+                    <span id="cnt-horas">--</span>
+                    <label>horas</label>
+                </div>
+                <div class="bloque-glass">
+                    <span id="cnt-mins">--</span>
+                    <label>min</label>
+                </div>
+                <div class="bloque-glass">
+                    <span id="cnt-segs">--</span>
+                    <label>seg</label>
+                </div>
+            </div>
+
+            <div class="cuenta-glass-card">
+                <div class="cuenta-huellas">👣 &nbsp; 👣</div>
+                <p class="cuenta-label">Su nombre será</p>
+                <p class="cuenta-nombre">Eduardo Rosales Laurencio</p>
+                <p class="cuenta-sub">Capi Jr. · el gordo más esperado 🥊</p>
+                <div class="cuenta-separador"></div>
+                <p class="cuenta-fecha">24 de julio de 2026</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="seccion" id="s6">
+        <div class="s6-bg"></div>
+        <div class="nombre-content">
+            <p class="eyebrow">su nombre brillará para siempre</p>
+            <div class="nombre-animado" id="nombre-animado">
+                <span class="letra" style="--d:0">E</span>
+                <span class="letra" style="--d:1">d</span>
+                <span class="letra" style="--d:2">u</span>
+                <span class="letra" style="--d:3">a</span>
+                <span class="letra" style="--d:4">r</span>
+                <span class="letra" style="--d:5">d</span>
+                <span class="letra" style="--d:6">o</span>
+            </div>
+            <div class="nombre-linea"></div>
+            <p class="nombre-completo">Rosales Laurencio</p>
+            <div class="nombre-emojis">
+                <span class="nom-emoji" style="--dd:0">👶</span>
+                <span class="nom-emoji" style="--dd:1">💙</span>
+                <span class="nom-emoji" style="--dd:2">⭐</span>
+                <span class="nom-emoji" style="--dd:3">🥊</span>
+                <span class="nom-emoji" style="--dd:4">💪</span>
+            </div>
+            <div class="nombre-glass">
+                <p>Llegará el <strong>24 de julio de 2026</strong></p>
+                <p>Hijo de <strong>Claritza</strong> y <strong>Capi</strong> 💕</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="seccion" id="s7">
+        <div class="s7-bg"></div>
+        <div class="celebracion-emojis" id="celebracion-emojis"></div>
+
+        <div class="celebracion-content">
+            <h2 class="cel-titulo">¡Lo esperamos<br>con todo el amor!</h2>
+            <div class="cel-grid">
+                <div class="cel-card">
+                    <span>🍼</span>
+                    <p>Listo para<br>llegar</p>
+                </div>
+                <div class="cel-card">
+                    <span>🧸</span>
+                    <p>Cuarto<br>preparado</p>
+                </div>
+                <div class="cel-card">
+                    <span>👣</span>
+                    <p>Sus primeros<br>pasos</p>
+                </div>
+                <div class="cel-card">
+                    <span>⚽</span>
+                    <p>Futuro<br>campeón</p>
+                </div>
+                <div class="cel-card">
+                    <span>🥊</span>
+                    <p>Capi Jr.<br>en camino</p>
+                </div>
+                <div class="cel-card">
+                    <span>💙</span>
+                    <p>Amado<br>infinito</p>
+                </div>
+            </div>
+            <p class="cel-frase">"Ya queremos ver tu carita,<br><strong>gordo hermoso</strong> 💙"</p>
+        </div>
+    </section>
+
+    <section class="seccion" id="s8">
+        <div class="s8-bg"></div>
+        <div class="final-content">
+            <div class="final-corona">👑</div>
+            <h1 class="final-titulo oculto" id="final-titulo">
+                Claritza<br><em>Rosales Laurencio</em>
+            </h1>
+            <p class="final-sub oculto" id="final-sub">LA MUJER MÁS HERMOSA DE MI VIDA</p>
+            <div class="final-linea oculto" id="final-linea"></div>
+            <div class="final-glass oculto" id="final-fecha">
+                <div class="final-item">
+                    <span>💕</span>
+                    <span>Juntos desde el 3 de mayo de 2025</span>
+                </div>
+                <div class="final-item">
+                    <span>👶</span>
+                    <span>Eduardo llega el 24 de julio de 2026</span>
+                </div>
+                <div class="final-item">
+                    <span>🥊</span>
+                    <span>Capi Jr., el más esperado</span>
+                </div>
+            </div>
+            <p class="final-frase oculto" id="final-frase">
+                Te amo a ti y a nuestro bebé<br>con todo lo que soy.
+            </p>
+            <div class="final-firma oculto" id="final-firma">— Capi 🥊</div>
+            <button class="btn-share oculto" id="btn-share">
+                <i class="fas fa-share-nodes"></i>
+                <span>Guardar recuerdo</span>
+            </button>
+        </div>
+    </section>
+
+    <script src="script2.js"></script>
+</body>
+</html>
